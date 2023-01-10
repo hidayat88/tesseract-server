@@ -15,7 +15,8 @@ COPY --from=deps_prod /app/node_modules/ ./dist/node_modules/
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
-EXPOSE 8884
+#8884 Port Expose original, changed due to shared hosting cannot read port 8884
+EXPOSE 2083 
 #HEALTHCHECK CMD curl -f http://127.0.0.1:8884/.well-known/health/healthy || exit 1
 ENV NODE_ENV "production"
 

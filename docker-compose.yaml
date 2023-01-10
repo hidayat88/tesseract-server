@@ -6,5 +6,6 @@ services:
       dockerfile: Dockerfile
       context: .
     image: tesseract-server:dev
+    #Port change from 8884 to 2083 
     ports:
-      - 8884:8884
+      - 2083:2083

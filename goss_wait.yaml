@@ -1,3 +1,4 @@
 port:
-  tcp:8884:
+# port changed to 2083
+  tcp:2083:
     listening: true
